@@ -10,7 +10,9 @@ import math;
 Tbajos = 0
 Tintermedios = 0
 Taltos = 0
+Tm = 0 #total de magnitud
 mayor = 0
+menor = 100
 #determinador de ciclos:
 
 Ns = int(input("porfavor ingrese la cantidad de sismos ocurridos en un dia: ")); #numero de sismos
@@ -31,23 +33,31 @@ for i in range(Ns):
     if M >= 1 and M <= 3:
         print(f"el sismo es de nivel bajo con una magnitud de: {M}");
         Tbajos += 1;
+        Tm += M
     elif M > 3 and M < 7:
         print(f"el sismo es de nivel intermedio con una magnitud de: {M}");
         Tintermedios += 1;
+        Tm += M
     else:
         print(f"el sismo es de nivel alto con una magnitud de: {M}");
-        Taltos += 1;   
+        Taltos += 1; 
+        Tm += M
 #resultado mas alto:
         
     if M > mayor:
         mayor = M
         Mnom = lugar
         Mprof = P
+    if M < menor:
+        menor = M
+        mnom = lugar
+        mzon = zona 
 #resumen total del programa:
         
 Psisb = (Tbajos / Ns) * 100;
 Psism = (Tintermedios / Ns) * 100;
 Psisa = 100 - (Psism + Psisb);
+promT = Tm / Ns
     #totales de sismos
 print (f"la cantidad de sismos bajos fueron de: {Tbajos}.");
 print (f"representando un {Psisb}% de los sismos ocurrdos. \n");
@@ -57,7 +67,10 @@ print (f"representando un {Psism}% de los sismos ocurrdos. \n");
 
 print (f"la cantidad de sismos altos fueron de: {Taltos}.");
 print (f"representando un {Psisa}% de los sismos ocurrdos. \n");
-    #sismo mayor
+    #Mayor o menor
 print(f"el sismo con mayor magnitud fue de {mayor} en {Mnom} con una profundidad de {Mprof}");
+print(f"el sismo con menor magnitud fue de {menor} en {mnom} con una ubicacion {mzon} \n");
+    #promedio de los sismos
+print(f"el promedio de los sismos entregados hoy fue de: {promT}");
     
 
