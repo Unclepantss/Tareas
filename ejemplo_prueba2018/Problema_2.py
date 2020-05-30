@@ -21,8 +21,8 @@ while Ns <= 0 :
 for i in range(Ns):
 #petición de datos:
     
-    P = float(input("porfavir ingrese la profundidad del sismo (en kilometros): "));
-    T = float(input("porfavor ingrese el tiempo transcurrido durante el sismo: "));
+    P = float(input("porfavor ingrese la profundidad del sismo (en kilometros): "));
+    T = float(input("porfavor ingrese el tiempo transcurrido durante el sismo (en segundos): "));
     A = float(input("porfavor ingrese la amplitud del sismo: "));
     zona = input("ingrese la ubicacion del sismo: ");
     lugar = input("porfavor ingrese el lugar del sismo: ");
@@ -31,14 +31,17 @@ for i in range(Ns):
     M = math.log10(A) + (3 * math.log10(8 * T)) - 2.92;
     
     if M >= 1 and M <= 3:
+        print("");
         print(f"el sismo es de nivel bajo con una magnitud de: {M}");
         Tbajos += 1;
         Tm += M
     elif M > 3 and M < 7:
+        print("");
         print(f"el sismo es de nivel intermedio con una magnitud de: {M}");
         Tintermedios += 1;
         Tm += M
     else:
+        print("");
         print(f"el sismo es de nivel alto con una magnitud de: {M}");
         Taltos += 1; 
         Tm += M
@@ -68,7 +71,7 @@ print (f"representando un {Psism}% de los sismos ocurrdos. \n");
 print (f"la cantidad de sismos altos fueron de: {Taltos}.");
 print (f"representando un {Psisa}% de los sismos ocurrdos. \n");
     #Mayor o menor
-print(f"el sismo con mayor magnitud fue de {mayor} en {Mnom} con una profundidad de {Mprof}");
+print(f"el sismo con mayor magnitud fue de {mayor} en {Mnom} con una profundidad de {Mprof}Km");
 print(f"el sismo con menor magnitud fue de {menor} en {mnom} con una ubicacion {mzon} \n");
     #promedio de los sismos
 print(f"el promedio de los sismos entregados hoy fue de: {promT}");
