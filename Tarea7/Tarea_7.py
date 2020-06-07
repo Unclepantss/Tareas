@@ -6,10 +6,11 @@ Created on Wed Jun  3 12:48:09 2020
 """
 
 entrada = open("secuencias.txt","r");
+linea = entrada.readline().strip();
 valor = 0
 N = 1
-for linea in entrada: 
-    datos = linea.split(",")  
+for linea in entrada:
+    datos = linea.split(",");
     num = int(datos[0])
     if num > valor:
        valor = num
