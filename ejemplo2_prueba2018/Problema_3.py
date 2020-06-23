@@ -5,7 +5,9 @@ Created on Sat May 30 17:11:36 2020
 @author: Antonio
 """
 
-open ("cables.txt")
+cables = open ("cables.txt")
+linea = cables.readline().strip();
+cables = linea.split(" ");
 
 if linea == 3:
     if cable_1 == "rojo":
