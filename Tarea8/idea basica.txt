@@ -2,3 +2,5 @@ leer
 mover a valor 1
 mover a valor 1 a valor 2
 comprobar valor 1 entre linea y valor 2
+Correccion:
+* se debe comprobar los datos primero y luego mover valores *
