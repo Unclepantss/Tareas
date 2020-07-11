@@ -16,7 +16,7 @@ temp2 = 0;
 temp3 = 0;
 Pc = 0;
 for linea in entrada:
-    if temp3 >= 37.5 and temp >= 37.5 and temp2 < 37.5:
+    if temp3 >= 37.5 and temp > 37.5 and temp2 < 37.5:
         print(nombre, apellido)
         Pc += 1
     nombre = datos[0];
